@@ -1,0 +1,20 @@
+{{#each this}}
+<div class="card-js">
+    <div class="card-img-top">
+        <img src="{{flags.svg}}" alt="{{name.common}}" width="100" class="img-js">
+        <h2 class="card-title">{{name.common}}</h2>
+    </div>
+    <div class="card-body">
+        <p class="card">Capital: <span class="text">{{capital}}</span></p>
+        <p class="card">Population: <span class="text">{{population}}</span></p>
+        <p class="card">Languages:
+            <span class="text">
+            {{#each languages}} 
+            {{this}},
+             {{/each}}
+            </span>
+            </p>
+    
+    </div>
+</div>
+ {{/each}}
