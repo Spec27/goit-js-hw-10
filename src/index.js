@@ -26,7 +26,7 @@ function onFormValue(event) {
 
 function renderCountryCard(country) {
   let countryLength = country.length;
-  if (2 < countryLength && countryLength < 10) {
+  if (1 < countryLength && countryLength < 10) {
     manyСoincidences();
     const marcupInfo = samplesCountriesListTpl(country);
     refs.renderCountryList.innerHTML = marcupInfo;
