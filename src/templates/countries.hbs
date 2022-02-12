@@ -9,8 +9,8 @@
         <p class="card">Population: <span class="text">{{population}}</span></p>
         <p class="card">Languages:
             <span class="text">
-            {{#each languages}} 
-            {{this}},
+            {{#each languages}}{{#if @index}},{{/if}}
+           {{this}}
              {{/each}}
             </span>
             </p>

@@ -5,7 +5,7 @@ import samplesCountriesTpl from './templates/countries.hbs';
 import API from './fetchCountries';
 import getRefs from './get-refs';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-const DEBOUNCE_DELAY = 300;
+const DEBOUNCE_DELAY = 500;
 
 const refs = getRefs();
 
@@ -16,15 +16,18 @@ refs.class.classList.add('body-js');
 function onFormValue(event) {
   event.preventDefault();
   const serchQuery = event.target.value.trim();
-  clearList();
+  if (serchQuery === '') {
+    clearList();
+    return;
+  }
 
   API.fetchCoutryById(serchQuery).then(renderCountryCard).catch(onError);
 }
 
 function renderCountryCard(country) {
   let countryLength = country.length;
-  if (2 < countryLength && countryLength < 10) {
-    onManySuitable();
+  if (countryLength > 1 && countryLength < 10) {
+    manyСoincidences();
     const marcupInfo = samplesCountriesListTpl(country);
     refs.renderCountryList.innerHTML = marcupInfo;
   }
@@ -35,10 +38,9 @@ function renderCountryCard(country) {
   if (country.status === 404) {
     clearList();
     onError();
-    return;
   }
 }
-function onManySuitable() {
+function manyСoincidences() {
   Notify.info('Too many matches found. Please enter a more specific name.');
 }
 function onError() {

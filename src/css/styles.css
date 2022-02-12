@@ -15,7 +15,7 @@ body {
 #search-box {
   font: inherit;
   padding: 8px;
-  min-width: 320px;
+  max-width: 320px;
   margin-bottom: 16px;
   font-style: normal;
   font-weight: bold;
@@ -28,8 +28,8 @@ body {
     url(../img/80215-priroda-atmosfera-mir-zemlya-liniya-3840x2160.jpg);
 }
 .form-control {
-  width: 400px;
-  height: 80px;
+  width: 320px;
+  height: 60px;
   margin-top: 70px;
   border-style: none;
   border-radius: 10px;
