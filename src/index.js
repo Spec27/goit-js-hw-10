@@ -5,7 +5,7 @@ import samplesCountriesTpl from './templates/countries.hbs';
 import API from './fetchCountries';
 import getRefs from './get-refs';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-const DEBOUNCE_DELAY = 500;
+const DEBOUNCE_DELAY = 300;
 
 const refs = getRefs();
 
@@ -26,7 +26,7 @@ function onFormValue(event) {
 
 function renderCountryCard(country) {
   let countryLength = country.length;
-  if (countryLength > 1 && countryLength < 10) {
+  if (2 < countryLength && countryLength < 10) {
     manyСoincidences();
     const marcupInfo = samplesCountriesListTpl(country);
     refs.renderCountryList.innerHTML = marcupInfo;
@@ -38,6 +38,7 @@ function renderCountryCard(country) {
   if (country.status === 404) {
     clearList();
     onError();
+    return;
   }
 }
 function manyСoincidences() {
