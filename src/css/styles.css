@@ -20,10 +20,9 @@ body {
 }
 
 .body-js {
-  background-image: linear-gradient(to right, rgba(133, 105, 48, 0.315), rgba(0, 1, 53, 0.452)),
-    url(../img/Texture_programming_0_1_577641_1280x693.jpg);
+  background-image: linear-gradient(to right, rgba(16, 16, 17, 0.8), rgba(0, 1, 53, 0.452)),
+    url(../img/1616592691_42-p-khaker-fon-47@2x.jpg);
 }
-
 .form-control {
   width: 400px;
   height: 60px;
@@ -51,7 +50,7 @@ body {
 .card-title {
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 40px;
   color: #ffffff;
 }
@@ -59,17 +58,17 @@ body {
 .card {
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 26px;
   color: #ffffff;
 }
 .text {
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 18px;
   list-style: none;
-  color: #7bfa62;
+  color: #ffdb64;
 }
 .card-js {
   display: block;
@@ -89,10 +88,10 @@ body {
   align-items: flex-end;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 18px;
   list-style: none;
-  color: #7bfa62;
+  color: #ffdb65;
 }
 
 .list-img {
