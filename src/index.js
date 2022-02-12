@@ -16,10 +16,7 @@ refs.class.classList.add('body-js');
 function onFormValue(event) {
   event.preventDefault();
   const serchQuery = event.target.value.trim();
-  if (serchQuery === '') {
-    clearList();
-    return;
-  }
+  clearList();
 
   API.fetchCoutryById(serchQuery).then(renderCountryCard).catch(onError);
 }
