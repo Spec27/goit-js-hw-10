@@ -23,8 +23,12 @@ function onFormValue(event) {
 
 function renderCountryCard(country) {
   let countryLength = country.length;
-  if (1 < countryLength && countryLength < 10) {
+  
+  if (countryLength >= 10) {
     manyСoincidences();
+  }
+
+  if (countryLength > 1 && countryLength < 10) {
     const marcupInfo = samplesCountriesListTpl(country);
     refs.renderCountryList.innerHTML = marcupInfo;
   }
@@ -35,7 +39,6 @@ function renderCountryCard(country) {
   if (country.status === 404) {
     clearList();
     onError();
-    return;
   }
 }
 function manyСoincidences() {
